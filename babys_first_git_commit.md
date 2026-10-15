@@ -6,11 +6,11 @@ Friends, let's push our code to github, there is no reason not to! Oh, and, repl
 - **Local**: your copy on disk/desktop/ide; commits stay local until you `git push`
 
 ```bash
-git clone <url>   # remote to local (once)
-git pull          # remote to local (updates)
-git push          # local to remote
-git remote -v     # show remote URL location
-git status        # branch + changed files
+git clone <url> # remote to local (once)
+git pull # remote to local (updates)
+git push # local to remote
+git remote -v # show remote URL location
+git status # branch + changed files
 ```
 
 ## Setup (once)
@@ -124,7 +124,7 @@ git push
 ### Merge to main?
 Here's how you 'pull request'
 ```bash
-gh pr create --base main --fill   # or use the "Compare & pull request" button on github
+gh pr create --base main --fill # or use the "Compare & pull request" button on github
 ```
 ### diffs!
 `diffs` lets you see what has changed
@@ -137,22 +137,22 @@ git log --oneline --graph # compact history
 Saves work without committing & useful when you need to `git switch` into something else but have half-finished edits.
 
 ```bash
-git stash                        # shelve uncommitted changes
-git stash pop                    # bring them back
+git stash # shelve uncommitted changes
+git stash pop # bring them back
 ```
 
 ### ah i made a typo in the branch name OR ah my branch is so old and useless
 To delete branches: 
 
 ```bash
-git branch -d <branch-name>      # delete a merged local branch
-git push origin --delete <branch-name>   # delete the remote branch
+git branch -d <branch-name> # delete a merged local branch
+git push origin --delete <branch-name> # delete the remote branch
 ```
 
 ### back to main
 My coworker did a bunch of things and merged to main, how do I catch up? 
 ```bash
-git fetch origin                 # download remote changes without merging
-git merge origin/main            # bring main's updates into your branch
+git fetch origin # download remote changes without merging
+git merge origin/main # bring main's updates into your branch
 ```
 > That's all folks! Remember to NEVER remove or delete your .git file, never `git reset --hard` and `git push --force` no matter what AI tells you both can destroy work (yours or a coworkers)!
